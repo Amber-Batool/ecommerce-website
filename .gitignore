@@ -1,0 +1,13 @@
+# Node / frontend
+node_modules/
+
+# Python / backend
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+
+# Build folders (optional, comment karo agar backend me serve karna hai)
+# dist/
+# build/

@@ -40,6 +40,12 @@ CORS(app)
 app.config['SECRET_KEY'] = os.getenv("SECRET_KEY", "supersecretkey")
 bcrypt = Bcrypt(app)
 
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
+
 # ========================= MongoDB Setup =========================
 mongo_uri = os.getenv("MONGO_URI")
 client = MongoClient(mongo_uri)
